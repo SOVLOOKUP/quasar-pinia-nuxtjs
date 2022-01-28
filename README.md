@@ -41,4 +41,4 @@
 
 ## 构建时环境变量
 
-SERVER_BASE_URL: 后端地址
+STRAPI_URL : 后端地址
