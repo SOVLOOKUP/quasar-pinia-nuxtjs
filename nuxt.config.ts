@@ -27,7 +27,4 @@ const nuxtConfig = defineNuxtConfig({
 
 export default {
   ...nuxtConfig,
-  strapi: {
-    url: process.env.STRAPI_URL ?? 'https://api.lingthink.com:4443',
-  },
 }
