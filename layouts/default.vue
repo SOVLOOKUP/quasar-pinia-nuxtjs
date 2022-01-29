@@ -15,7 +15,7 @@
             <q-route-tab
               style="width: 100px"
               :to="btn.path"
-              v-for="btn in modeTab[configStore.mode]"
+              v-for="btn in tab"
               :key="btn.name"
             >
               <Icon :icon="btn.icon" height="25" />
@@ -34,42 +34,11 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { useConfigStore } from '~/stores'
-
-const configStore = useConfigStore()
-
-interface ModeTab {
-  [ModeName: string]: { name: string; path: string; icon: string }[]
-}
-
-const modeTab: ModeTab = {
-  build: [
-    {
-      path: '/tagmanager',
-      name: '标签',
-      icon: 'mdi-tag',
-    },
-    {
-      path: '/concept',
-      name: '概念',
-      icon: 'mdi-script-text-outline',
-    },
-    {
-      path: '/datasource',
-      name: '数据源',
-      icon: 'mdi-database',
-    },
-    {
-      path: '/model',
-      name: '模型',
-      icon: 'mdi-electron-framework',
-    },
-    {
-      path: '/graphbuilder',
-      name: '构建',
-      icon: 'mdi-crane',
-    },
-  ],
-  app: [],
-}
+const tab = [
+  {
+    path: '/',
+    name: 'tab.home',
+    icon: 'mdi-tag',
+  },
+]
 </script>

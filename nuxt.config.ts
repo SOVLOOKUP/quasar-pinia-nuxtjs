@@ -2,10 +2,10 @@ import { defineNuxtConfig } from 'nuxt3'
 import { quasar } from '@quasar/vite-plugin'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
-const nuxtConfig = defineNuxtConfig({
+export default defineNuxtConfig({
   meta: {
     link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.svg' }],
-    title: 'GraphIntelligence',
+    title: 'quasar-nuxt',
   },
   css: [
     '~/assets/styles/quasar.sass',
@@ -26,10 +26,3 @@ const nuxtConfig = defineNuxtConfig({
     },
   },
 })
-
-export default {
-  ...nuxtConfig,
-  strapi: {
-    url: process.env.STRAPI_URL ?? 'https://api.lingthink.com:4443',
-  },
-}
